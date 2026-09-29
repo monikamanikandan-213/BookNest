@@ -1,0 +1,1107 @@
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+/* =========================================
+   BOOKNEST - MODERN LOGIN UI
+   ========================================= */
+
+.login-page {
+    min-height: 100vh;
+    background: #f4f1eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.login-container {
+    width: 1100px;
+    max-width: 100%;
+    min-height: 680px;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 20px 60px rgba(35, 45, 50, 0.12);
+}
+
+
+/* =========================================
+   LEFT SIDE
+   ========================================= */
+
+.login-visual {
+    background: #183b4a;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.login-visual::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    right: -150px;
+    top: -120px;
+}
+
+
+.login-visual::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 50%;
+    left: -150px;
+    bottom: -120px;
+}
+
+
+.visual-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 25px;
+    letter-spacing: 0.3px;
+}
+
+
+.brand span {
+    font-size: 28px;
+}
+
+
+.welcome-content {
+    margin-top: 95px;
+}
+
+
+.small-heading {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 18px;
+}
+
+
+.welcome-content h1 {
+    font-size: 52px;
+    line-height: 1.08;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+.welcome-content h1 span {
+    color: #b7d8d1;
+}
+
+
+.visual-description {
+    max-width: 420px;
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.78);
+}
+
+
+.reading-features {
+    margin-top: auto;
+    display: flex;
+    gap: 35px;
+    padding-top: 40px;
+}
+
+
+.reading-features div {
+    border-left: 2px solid rgba(255,255,255,0.25);
+    padding-left: 13px;
+}
+
+
+.reading-features span {
+    font-size: 11px;
+    color: #b7d8d1;
+    letter-spacing: 1px;
+}
+
+
+.reading-features p {
+    margin: 7px 0 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.82);
+}
+
+
+/* =========================================
+   RIGHT SIDE
+   ========================================= */
+
+.login-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 50px;
+}
+
+
+.login-form-box {
+    width: 390px;
+    max-width: 100%;
+}
+
+
+.mobile-logo {
+    display: none;
+}
+
+
+.form-welcome {
+    color: #718087;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+
+.login-form-box h2 {
+    color: #183b4a;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+}
+
+
+.login-subtitle {
+    color: #7c878b;
+    font-size: 14px;
+    margin: 10px 0 32px;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.login-form-box form label {
+    display: block;
+    color: #33454c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+.input-box {
+    height: 50px;
+    border: 1px solid #d9dfdf;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    margin-bottom: 20px;
+    background: #fafbfa;
+    transition: 0.2s ease;
+}
+
+
+.input-box:focus-within {
+    border-color: #4f7d7a;
+    box-shadow: 0 0 0 3px rgba(79,125,122,0.10);
+    background: #ffffff;
+}
+
+
+.input-box > span {
+    margin-right: 10px;
+    font-size: 15px;
+    opacity: 0.65;
+}
+
+
+.input-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #26383f;
+}
+
+
+.input-box input::placeholder {
+    color: #a1aaad;
+}
+
+
+.password-toggle {
+    border: none;
+    background: transparent;
+    color: #4f7d7a;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px 0 22px;
+    font-size: 12px;
+}
+
+
+.remember {
+    display: flex !important;
+    align-items: center;
+    gap: 7px;
+    margin: 0 !important;
+    font-weight: 400 !important;
+    color: #667278 !important;
+}
+
+
+.remember input {
+    accent-color: #315d72;
+}
+
+
+.forgot-password {
+    color: #4f7d7a;
+    cursor: pointer;
+}
+
+
+.login-error {
+    color: #b94b4b;
+    background: #fff2f2;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+
+.login-button {
+    width: 100%;
+    height: 51px;
+    border: none;
+    border-radius: 10px;
+    background: #183b4a;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+.login-button:hover {
+    background: #245467;
+    transform: translateY(-1px);
+}
+
+
+.login-button span {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CREATE ACCOUNT
+   ========================================= */
+
+.create-account {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: #7b8589;
+}
+
+
+.create-account button {
+    border: none;
+    background: transparent;
+    color: #315d72;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 4px;
+    padding: 0;
+    font-size: 13px;
+}
+
+
+.create-account button:hover {
+    text-decoration: underline;
+}
+
+
+.create-account-box {
+    margin-top: 18px;
+    padding: 17px;
+    background: #f3f7f6;
+    border: 1px solid #dce8e5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.create-account-box strong {
+    color: #183b4a;
+    font-size: 14px;
+}
+
+
+.create-account-box p {
+    color: #737f82;
+    font-size: 12px;
+    margin: 8px 0 12px;
+}
+
+
+.create-account-box button {
+    border: none;
+    background: #315d72;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 30px 0 18px;
+    color: #a0a8aa;
+    font-size: 11px;
+}
+
+
+.login-divider::before,
+.login-divider::after {
+    content: "";
+    height: 1px;
+    background: #e7e9e8;
+    flex: 1;
+}
+
+
+.login-footer {
+    text-align: center;
+    color: #8a9396;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+.login-footer strong {
+    color: #315d72;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .login-visual {
+        display: none;
+    }
+
+
+    .login-form-section {
+        min-height: 650px;
+        padding: 35px 25px;
+    }
+
+
+    .mobile-logo {
+        display: block;
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .login-page {
+        padding: 15px;
+    }
+
+
+    .login-container {
+        border-radius: 16px;
+    }
+
+
+    .login-form-section {
+        padding: 30px 20px;
+    }
+
+
+    .login-form-box h2 {
+        font-size: 25px;
+    }
+
+
+  }
+  /* =========================================
+   BOOKNEST - LIBRARY
+   MODERN EDITORIAL LIBRARY
+   ========================================= */
+
+.library-page {
+    min-height: 100vh;
+    background: #f7f3ea;
+    padding: 45px 6%;
+    color: #26332d;
+}
+
+
+/* HEADER */
+
+.library-header {
+    max-width: 1200px;
+    margin: 0 auto 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+
+.library-eyebrow {
+    color: #b86b4b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 12px;
+}
+
+
+.library-header h1 {
+    color: #17372c;
+    font-size: 42px;
+    line-height: 1.15;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+
+.library-description {
+    color: #737a75;
+    margin: 12px 0 0;
+    font-size: 15px;
+}
+
+
+.library-stat {
+    min-width: 150px;
+    padding: 20px 24px;
+    background: #ffffff;
+    border: 1px solid #e4ddd0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.library-stat strong {
+    color: #23483a;
+    font-size: 30px;
+}
+
+
+.library-stat span {
+    color: #7a817d;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+/* SEARCH */
+
+.library-toolbar {
+    max-width: 1200px;
+    margin: 0 auto 42px;
+}
+
+
+.library-search {
+    max-width: 650px;
+    height: 52px;
+    background: #ffffff;
+    border: 1px solid #ded8cc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 17px;
+    transition: 0.2s ease;
+}
+
+
+.library-search:focus-within {
+    border-color: #23483a;
+    box-shadow: 0 0 0 3px rgba(35,72,58,0.08);
+}
+
+
+.library-search span {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+
+.library-search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #26332d;
+    font-size: 14px;
+}
+
+
+.library-search input::placeholder {
+    color: #a0a39f;
+}
+
+
+/* SECTION */
+
+.library-books-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+
+.section-heading h2 {
+    color: #17372c;
+    font-size: 23px;
+    margin: 0;
+}
+
+
+.section-heading p {
+    color: #858b87;
+    font-size: 13px;
+    margin: 6px 0 0;
+}
+
+
+/* BOOK GRID */
+
+.book-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+
+/* BOOK CARD */
+
+.book-card {
+    background: #ffffff;
+    border: 1px solid #e3ddd2;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+
+.book-card:hover {
+    transform: translateY(-5px);
+    border-color: #c9c0b1;
+    box-shadow:
+        0 15px 35px rgba(38,51,45,0.10);
+}
+
+
+/* BOOK COVER */
+
+.book-cover {
+    height: 270px;
+    background: #23483a;
+    color: #ffffff;
+    margin: 15px 15px 0;
+    border-radius: 8px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.book-cover::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    right: -80px;
+    top: -60px;
+}
+
+
+.book-cover::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 50%;
+    left: -70px;
+    bottom: -50px;
+}
+
+
+.cover-decoration {
+    position: relative;
+    z-index: 1;
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+
+.cover-title {
+    position: relative;
+    z-index: 1;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+
+.cover-author {
+    position: relative;
+    z-index: 1;
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+
+.cover-mark {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 47px;
+    transform: translateX(-50%);
+    color: #d79a7d;
+    font-size: 22px;
+}
+
+
+/* BOOK INFORMATION */
+
+.book-info {
+    padding: 19px;
+}
+
+
+.book-category {
+    display: inline-block;
+    background: #f2e8dc;
+    color: #9b5d43;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 10px;
+}
+
+
+.book-info h3 {
+    color: #23483a;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+
+.book-author {
+    color: #7a817d;
+    font-size: 13px;
+    margin: 6px 0 14px;
+}
+
+
+.book-meta {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eeeae3;
+    padding-top: 12px;
+    margin-bottom: 15px;
+}
+
+
+.book-meta span {
+    font-size: 11px;
+    color: #707873;
+}
+
+
+.book-meta span:last-child {
+    color: #56725f;
+    font-weight: 600;
+}
+
+
+/* READ BUTTON */
+
+.read-book-button {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 7px;
+    background: #23483a;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.2s ease;
+}
+
+
+.read-book-button:hover {
+    background: #17372c;
+}
+
+
+.read-book-button span {
+    font-size: 17px;
+}
+
+
+/* EMPTY STATE */
+
+.library-empty {
+    background: #ffffff;
+    border: 1px solid #e3ddd2;
+    border-radius: 14px;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+
+.library-empty > div {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+
+.library-empty h3 {
+    color: #23483a;
+    margin: 0 0 7px;
+}
+
+
+.library-empty p {
+    color: #858b87;
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .library-page {
+        padding: 30px 20px;
+    }
+
+
+    .library-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .library-header h1 {
+        font-size: 32px;
+    }
+
+
+    .library-stat {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    .book-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+
+    .book-cover {
+        height: 220px;
+    }
+
+
+    .cover-title {
+        font-size: 19px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .book-cover {
+        height: 260px;
+    }
+
+}
